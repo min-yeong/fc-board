@@ -1,6 +1,5 @@
 package com.fastcampus.fcboard.domain
 
-import com.fastcampus.fcboard.exception.PostNotFoundException
 import com.fastcampus.fcboard.exception.PostNotUpdatableException
 import com.fastcampus.fcboard.service.dto.PostUpdateRequestDto
 import jakarta.persistence.Entity

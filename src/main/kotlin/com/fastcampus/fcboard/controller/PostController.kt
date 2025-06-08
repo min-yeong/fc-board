@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.RestController
 import java.time.LocalDateTime
 
 @RestController
-class PostController (
-    private val postService: PostService,
+class PostController(
+    private val postService: PostService
 ) {
 
     @PostMapping("/posts")
