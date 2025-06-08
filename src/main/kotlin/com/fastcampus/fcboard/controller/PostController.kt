@@ -36,7 +36,6 @@ class PostController(
         @PathVariable id: Long,
         @RequestBody postUpdateRequest: PostUpdateRequest
     ): Long {
-        println("----updatePost----")
         return postService.updatePost(id, postUpdateRequest.toDto())
     }
 
