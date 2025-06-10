@@ -1,4 +1,4 @@
-package com.fastcampus.fcboard.controller.dto
+package com.fastcampus.fcboard.service.dto
 
 import com.fastcampus.fcboard.domain.Comment
 import com.fastcampus.fcboard.domain.Post
@@ -8,7 +8,7 @@ data class CommentCreateRequestDto(
     val createdBy: String
 )
 
-fun CommentCreateRequestDto.toEntity(post : Post) = Comment(
+fun CommentCreateRequestDto.toEntity(post: Post) = Comment(
     content = content,
     createdBy = createdBy,
     post = post
