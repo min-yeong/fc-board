@@ -163,7 +163,7 @@ class PostServiceTest(
                 postPage.size shouldBe 5
                 postPage.content.size shouldBe 5
                 postPage.content[0].title shouldContain "title1"
-                postPage.content[0].createdBy shouldContain "harris1"
+                postPage.content[0].createdBy shouldContain "harris"
             }
         }
         When("작성자로 검색") {
