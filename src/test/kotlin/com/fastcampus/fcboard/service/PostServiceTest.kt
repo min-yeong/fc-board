@@ -33,7 +33,7 @@ class PostServiceTest(
     beforeSpec {
         postRepository.saveAll(
             listOf(
-                Post(title = "title", content = "content1", createdBy = "harris1", tags = listOf("tag1", "tag2")),
+                Post(title = "title1", content = "content1", createdBy = "harris1", tags = listOf("tag1", "tag2")),
                 Post(title = "title12", content = "content1", createdBy = "harris1", tags = listOf("tag1", "tag2")),
                 Post(title = "title13", content = "content1", createdBy = "harris1", tags = listOf("tag1", "tag2")),
                 Post(title = "title14", content = "content1", createdBy = "harris1", tags = listOf("tag1", "tag2")),
