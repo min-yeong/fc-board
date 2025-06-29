@@ -10,7 +10,7 @@ data class PostSummaryResponse(
     val createdBy: String,
     val createdAt: String,
     val tag: String? = null,
-    val LikeCount: Long = 0
+    val likeCount: Long = 0
 )
 
 fun Page<PostSummaryResponseDto>.toResponse() = PageImpl(
@@ -24,5 +24,6 @@ fun PostSummaryResponseDto.toResponse() = PostSummaryResponse(
     title = title,
     createdBy = createdBy,
     createdAt = createdAt,
-    tag = firstTag
+    tag = firstTag,
+    likeCount = likeCount
 )
