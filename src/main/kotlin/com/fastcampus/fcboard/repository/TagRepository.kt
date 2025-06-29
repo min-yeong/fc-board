@@ -14,13 +14,13 @@ interface TagRepository : JpaRepository<Tag, Long>, CustomTagRepository {
 }
 
 interface CustomTagRepository {
-    fun findPageBy(pageRequest: Pageable, tagName: String,): Page<Tag>
+    fun findPageBy(pageRequest: Pageable, tagName: String): Page<Tag>
 }
 
 class CustomTagRepositoryImpl : CustomTagRepository, QuerydslRepositorySupport(Tag::class.java) {
-    override fun findPageBy(pageRequest: Pageable, tagName: String, ): Page<Tag> {
+    override fun findPageBy(pageRequest: Pageable, tagName: String): Page<Tag> {
         return from(tag)
-            .join(tag.post).fetchJoin()
+            .join(tag.post, post).fetchJoin()
             .where(tag.name.eq(tagName))
             .orderBy(tag.post.createdAt.desc())
             .offset(pageRequest.offset)
